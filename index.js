@@ -7,7 +7,7 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const app = express();
 const PORT = process.env.PORT|| 5000;
-const Reports= require('../thevcproject/src/components/addReports/reports.js');
+const Reports= require('./reports.js');
 dotenv.config();
 // Connect to MongoDB
 mongoose.connect('mongodb+srv://shashankmishradev14:Shashankwas1ere@vcproject.0odmlm6.mongodb.net/?retryWrites=true&w=majority&appName=vcproject', { useNewUrlParser: true, useUnifiedTopology: true });
