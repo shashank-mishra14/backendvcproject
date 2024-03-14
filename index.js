@@ -10,7 +10,8 @@ const PORT = process.env.PORT|| 5000;
 const Reports= require('./reports.js');
 dotenv.config();
 // Connect to MongoDB
-mongoose.connect('mongodb+srv://shashankmishradev14:Shashankwas1ere@vcproject.0odmlm6.mongodb.net/?retryWrites=true&w=majority&appName=vcproject', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect('mongodb+srv://shashankmishradev14:Shashankwas1ere@vcproject.0odmlm6.mongodb.net/?retryWrites=true&w=majority&appName=vcproject', { useNewUrlParser: true, useUnifiedTopology: true ,   ssl: true// Ensure SSL is enabled
+});
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 db.once('open', () => {
